@@ -178,36 +178,7 @@ ui <- fluidPage(
                       ) # end Sidebar layou
              ), #end word cloud plot panel
              
-             tabPanel("Sector Sentiment",
-                      titlePanel("Sector Sentiment"),
-                      sidebarLayout(
-                        sidebarPanel(
-                          dateRangeInput("sectorCreateRange",
-                                         "Created Range:",
-                                         min = "2018-01-01",
-                                         max = max_date,
-                                         start = "2021-04-01",
-                                         end = max_date),
-                          selectInput("tickersFrom",
-                                      "Tickers from: ",
-                                      c("Selftext" = "post_stocks",
-                                        "Title" = "title_stocks"),
-                                      selected = "title_stocks"),
-                          selectInput("sentimentOut",
-                                      "Sentiment based on: ",
-                                      c("Title Sentiment" = "title_sentiment", 
-                                        "Post Sentiment" = "post_sentiment", 
-                                        "Score" = "score", 
-                                        "Number of Comments" = "num_comments", 
-                                        "Number of Awards" = "count_awards"),
-                                      selected = "title_sentiment"),
-                          submitButton("Change Output")
-                        ), #end sidebar panel
-                        mainPanel(
-                          plotOutput("sector_graph")
-                        )
-                      ) # end Sidebar layou
-             ), #end word cloud plot panel
+             
              
              tabPanel("Table",
                       titlePanel("Table"),
