@@ -116,7 +116,7 @@ ui <- fluidPage(
                                          end = max_date),
                           numericInput('clusters', 
                                        'Cluster count', 
-                                       4, 
+                                       3, 
                                        min = 1, 
                                        max = 9),
                           submitButton("Change Output")
